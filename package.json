@@ -1,0 +1,51 @@
+{
+  "name": "sftp-uploader-eng",
+  "version": "1.0.3",
+  "description": "sftp-uploader",
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "import": "./lib/index.js"
+  },
+  "author": "ITFrogs",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:itfrogs/sftp-uploader-eng.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itfrogs/sftp-uploader-eng/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "glob": "^11.0.0",
+    "path": "^0.12.7",
+    "single-line-log": "^1.1.2",
+    "ssh2-sftp-client": "^11.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sftp",
+    "upload",
+    "vite"
+  ]
+}
