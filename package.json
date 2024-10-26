@@ -1,6 +1,6 @@
 {
   "name": "sftp-uploader-eng",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "sftp-uploader",
   "type": "module",
   "main": "lib/index.js",

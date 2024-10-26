@@ -11,7 +11,6 @@ $ npm i sftp-uploader
 
 ## Note
 This version is only available for node "^18.0.0 || >=20.0.0" <br />
-For lower node versions, please download [v1.x](https://www.npmjs.com/package/sftp-uploader-eng/v/1.0.3)
 
 ## Configuration
 
@@ -21,13 +20,15 @@ import SftpUploader from 'sftp-uploader'
 
 const sftp = SftpUploader({
     dir: resolve('./dist'), // Directory to upload files
-    url: '******', // Directory to upload
+    serverPath: '******', // Directory to upload from root of the server
     host: '*****', // sftp address
     port: '*****', // sftp port
     username: '*****', // Account
     password: '*****', // Password
     // Delay upload time (milliseconds) to solve the problem that some projects will trigger multiple packaging completions
     delay: 0,
+    //Allow patterns to match files/directories that start with '.'
+    dot: false,
     // Upload file filter, you can filter out unnecessary files, return false to not upload the file (optional)
     uploadFilter(file) => file.name.endsWith(.gz),
     // Delete file filter, you can filter out files that do not need to be deleted, return false to not delete the file (optional)
