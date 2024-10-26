@@ -1,4 +1,4 @@
-# sftp-uploader
+# sftp-uploader (English version)
 
 > `sftp-uploader` is a file upload plug-in based on `ssh2-sftp-client` encapsulation, supporting `webpack` and `vite`. It can upload the packaged project files to the specified sftp server directory with one click. It can be integrated as a `webpack` or `vite` plug-in or used `separately`, and supports automatic creation of upload directories.
 
