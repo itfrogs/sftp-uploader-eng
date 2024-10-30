@@ -1,12 +1,12 @@
 # sftp-uploader (English version)
 
-> `sftp-uploader` is a file upload plug-in based on `ssh2-sftp-client` encapsulation, supporting `webpack` and `vite`. It can upload the packaged project files to the specified sftp server directory with one click. It can be integrated as a `webpack` or `vite` plug-in or used `separately`, and supports automatic creation of upload directories.
+> `sftp-uploader-eng` is a file upload plug-in based on `ssh2-sftp-client` encapsulation, supporting `webpack` and `vite`. It can upload the packaged project files to the specified sftp server directory with one click. It can be integrated as a `webpack` or `vite` plug-in or used `separately`, and supports automatic creation of upload directories.
 
 ## Install
 ![NPM](https://nodei.co/npm/sftp-uploader-eng.png)
 ```sh
-$ yarn add sftp-uploader
-$ npm i sftp-uploader
+$ yarn add sftp-uploader-eng
+$ npm i sftp-uploader-eng
 ```
 
 ## Note
@@ -16,7 +16,7 @@ This version is only available for node "^18.0.0 || >=20.0.0" <br />
 
 ```javascript
 import { resolve } from 'path'
-import SftpUploader from 'sftp-uploader'
+import SftpUploader from 'sftp-uploader-eng'
 
 const sftp = SftpUploader({
     dir: resolve('./dist'), // Directory to upload files
@@ -29,6 +29,8 @@ const sftp = SftpUploader({
     delay: 0,
     //Allow patterns to match files/directories that start with '.'
     dot: false,
+    //If true, then environment variable UPLOAD will be ignored.
+    autoupload: false,
     // Upload file filter, you can filter out unnecessary files, return false to not upload the file (optional)
     uploadFilter(file) => file.name.endsWith(.gz),
     // Delete file filter, you can filter out files that do not need to be deleted, return false to not delete the file (optional)
