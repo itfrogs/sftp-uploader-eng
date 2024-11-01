@@ -32,9 +32,13 @@ const sftp = SftpUploader({
     //If true, then environment variable UPLOAD will be ignored.
     autoupload: false,
     // Upload file filter, you can filter out unnecessary files, return false to not upload the file (optional)
-    uploadFilter(file) => file.name.endsWith(.gz),
+    uploadFilter(file) {
+        return true;
+    },
     // Delete file filter, you can filter out files that do not need to be deleted, return false to not delete the file (optional)
-    deleteFilter(file) => file.name.endsWith(.gz),
+    deleteFilter(file) {
+        return false;
+    },
     // Preview link address (optional)
     previewPath: 'https://www.google.com'
 })
